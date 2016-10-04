@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% block content %}
+
+ <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Seleccione o fármaco<span class="caret"></span></button>
+ <ul class="dropdown-menu scrollable-menu" role="menu">
+ {% if drugs %}
+ {% for drug in drugs %}
+    <li><a href={{drug.id}}>{{drug.name}}</a></li>
+ {% endfor %}
+ {% endif %}
+ </ul>
+ </div>
+ {% endblock %}

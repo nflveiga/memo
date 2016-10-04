@@ -1,0 +1,8 @@
+{% extends '_base.html' %}
+
+ {% block content %}
+ <h2>{{ drug.name }}</h2>
+ <p>Categoria: {{ drug.category }}</p>
+ <p>{{ drug.content | safe}}</p>
+ {% endblock %}
+ 
