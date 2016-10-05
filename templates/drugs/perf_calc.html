@@ -1,0 +1,24 @@
+{% extends '_base.html' %}
+{% block content %}
+<div class="container" id="calcContaner">
+<div id="radioDiv">
+ <label class="radio-inline" id="chooseRythm">
+      <input type="radio" name="rythmConvert" value="to_mcg_kg_min"/>ml/h -> mcg/kg/min
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="rythmConvert" value="to_ml_h"/>mcg/kg/min -> ml/h
+    </label>
+</div>
+<label>Peso do doente (Kg)</label>
+<input class="form-control" id="weight" type="number">
+<label>Concentração (mg/ml)</label>
+<input class="form-control" id="concentration" type="number">
+<label>Ritmo</label>
+<input class="form-control" id="rythm" type="number">
+<br>
+<submit class="btn btn-lg btn-primary" id="calculate">Calcular</submit>
+<div id="resultDiv">
+<h3 id="result"></h3>
+</div>
+</div>
+{% endblock%}

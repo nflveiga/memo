@@ -17,3 +17,8 @@ def drugdetail(request, drug_id):
     c = Context({'drug': drug, })
     return HttpResponse(t.render(c))
 
+def perf_calc(request):
+    t=loader.get_template('drugs/perf_calc.html')
+    return HttpResponse(t.render())
+    
+
