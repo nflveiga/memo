@@ -1,0 +1,8 @@
+{% extends '_base.html' %}
+
+ {% block content %}
+ <h2>{{ protocol.name }}</h2>
+ <p>Categoria: {{ protocol.category }}</p>
+ <p>{{ protocol.content | safe}}</p>
+ {% endblock %}
+ 

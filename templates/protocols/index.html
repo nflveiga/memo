@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% block content %}
+
+ <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Seleccione o protocolo<span class="caret"></span></button>
+ <ul class="dropdown-menu scrollable-menu" role="menu">
+ {% if protocols %}
+ {% for protocol in protocols %}
+    <li><a href={{protocol.id}}>{{protocol.name}}</a></li>
+ {% endfor %}
+ {% endif %}
+ </ul>
+ </div>
+ {% endblock %}
